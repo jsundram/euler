@@ -2,16 +2,25 @@
 # natural numbers and the square of the sum.
 
 import math
+from timed import timed
 
-N = 100
-total = (N + 1) * N / 2
-SquareOfSum = total ** 2
-SumOfSquare = 0
+@timed
+def original_solution(N):
+    """runtime on mba is 0.026ms"""
+    total = (N + 1) * N / 2
+    SquareOfSum = total ** 2
+    SumOfSquare = 0
 
-# xrange treats the interval like this [start, end)
-for i in xrange(1, N + 1):
-    SumOfSquare += i**2
+    # xrange treats the interval like this [start, end)
+    for i in xrange(1, N + 1):
+        SumOfSquare += i**2
 
-print SquareOfSum - SumOfSquare
+    return SquareOfSum - SumOfSquare
+
+def main():
+    print 'The answer (original) is: %d' % original_solution(100)
+
+if __name__ == '__main__':
+    main()
 
 # Runtime: O(n)

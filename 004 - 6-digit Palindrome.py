@@ -6,8 +6,6 @@
 import math
 from timed import timed
 
-### Bounds: 317**2 > 100,000 999x999 = 998,001
-
 def palindrome(s):
     """purpose-built for this problem"""
     if len(s) == 6:
@@ -15,6 +13,7 @@ def palindrome(s):
     
 @timed
 def original_solution():
+    """runtime on mba is 59ms"""
     best = 0;
     for i in xrange(999, 100, -1):
          for j in xrange(999, i, -1):

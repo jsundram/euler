@@ -23,7 +23,7 @@ def original_solution():
     return best
 
 def main():
-    print "Original solution is: ", original_solution()
+    print 'The answer (original) is: %d' % original_solution()
 
 if __name__ == '__main__':
     main()
